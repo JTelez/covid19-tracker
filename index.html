@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COVID-19 Tracker</title>
+    <link href="style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+</head>
+<body onload="defaultStats()">
+    <div class="header">
+        <nav class="menu-container">
+            <!-- burger menu -->
+            <input type="checkbox" aria-label="Toggle menu" />
+            <span></span>
+            <span></span>
+            <span></span>
+          
+            <!-- logo -->
+            <a href="#" class="menu-logo">
+              <img src="https://disease.sh/assets/img/flags/us.png" alt="Error loading icon"/>
+            </a>
+          
+            <!-- menu items -->
+            <div class="menu">
+              <ul>
+                <li>
+                  <a href="https://coronavirus.jhu.edu/" target="_blank" rel="noopener noreferrer">
+                    Johns Hopkins Coronavirus Resource Center
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.cdc.gov/coronavirus/2019-ncov/index.html" target="_blank" rel="noopener noreferrer">
+                    CDC COVID-19 Information
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.redcross.org/donate/coronavirus-donations.html/" target="_blank" rel="noopener noreferrer">
+                    American Red Cross Coronavirus Disaster Relief Fund 
+                  </a>
+                </li>
+              </ul>
+              <ul>
+              </ul>
+            </div>
+          </nav>
+    </div>
+    
+    <h1 class="world-container-title">Worldwide Statistics</h1>
+
+    <div class="world-container">
+        <div class="world-total-cases" id="card">
+            <h2>Worldwide Confirmed Cases</h2>
+            <h1 id="world-total-cases"></h1>
+        </div>
+    
+        <div class="world-active-cases" id="card">
+            <h2>Worldwide Active Cases</h2>
+            <h1 id="world-active-cases"></h1>
+        </div>
+    
+        <div class="world-deaths" id="card">
+            <h2>Worldwide Deaths</h2>
+            <h1 id="world-deaths"></h1>
+        </div>
+
+        <div class="world-tests" id="card">
+            <h2>Worldwide Tests</h2>
+            <h1 id="world-tests"></h1>
+        </div>
+    
+    </div>
+
+    <br>
+    <br>
+
+    <h1 class="us-container-title">U.S. Statistics</h1>
+
+    <div class="us-container">
+        <div class="us-total-cases" id="card">
+            <h2>U.S. Confirmed Cases</h2>
+            <h1 id="us-total-cases"></h1>
+        </div>
+    
+        <div class="us-active-cases" id="card">
+            <h2>U.S. Active Cases</h2>
+            <h1 id="us-active-cases"></h1>
+        </div>
+    
+        <div class="us-deaths" id="card">
+            <h2>U.S. Deaths</h2>
+            <h1 id="us-deaths"></h1>
+        </div>
+    
+        <div class="us-tests" id="card">
+            <h2>U.S. Tests</h2>
+            <h1 id="us-tests"></h1>
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <br>
+
+    <div class="other-container-head">
+        <select id="country-dropdown" onchange="updateStats()"></select>
+        <h1 class="other-container-title">Statistics</h1>
+    </div>
+
+    <div class="other-container">
+        <div class="other-total-cases" id="card">
+            <h2>Confirmed Cases</h2>
+            <h1 id="other-total-cases"></h1>
+        </div>
+    
+        <div class="other-active-cases" id="card">
+            <h2>Active Cases</h2>
+            <h1 id="other-active-cases"></h1>
+        </div>
+    
+        <div class="other-deaths" id="card">
+            <h2>Deaths</h2>
+            <h1 id="other-deaths"></h1>
+        </div>
+
+        <div class="other-tests" id="card">
+            <h2>Tests</h2>
+            <h1 id="other-tests"></h1>
+        </div>
+    
+    </div>
+
+    <div class="footer">
+        <p>Made by Jeremy T</p>
+    </div>
+
+    <script src="/covid19-api/script.js"></script>
+</body>
+</html>
